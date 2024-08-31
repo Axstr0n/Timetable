@@ -26,18 +26,20 @@ body{
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    position: relative;
+    /* justify-content: center;
+    position: relative; */
+    justify-content: space-between;
     width: 100%;
     height: 30px;
+    padding-top: 3px;
 }
 .header .logo-container{
     background-color: rgb(96, 96, 96);
     border-radius: 5px;
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
-    top: 3px;
-    left: 3px;
+    /* top: 3px;
+    left: 3px; */
 }
 .header .logo-container img{
     height: 100%;
@@ -47,10 +49,11 @@ body{
     color: white;
     font-size: 20px;
 }
-.header select{
-    position: absolute;
-    top: 0;
-    right: 0;
+.header .download-save-discard-select{
+    display: flex;
+    height: 80%;
+    justify-content: space-between;
+    gap: 2px;
 }
 
 /* ----------------------------------------------------------------------------- */
@@ -60,14 +63,17 @@ body{
 #subjects-abbreviation-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1px;
     padding-bottom: 5px;
     /* flex-wrap: wrap; */
-    width: 98%;
+    width: 93%;
     margin: auto;
 }
 .abbreviation-button{
+    display: inline-block;
     border: solid 2px transparent;
     padding: 2px 5px;
     border-radius: 5px;
@@ -82,7 +88,7 @@ body{
     display: flex;
     flex-direction: row;
     gap: 5px;
-    overflow-x:scroll;
+    overflow-x: scroll;
 }
 
 .subject-select-container{
@@ -149,7 +155,7 @@ body{
 /* TIMETABLE*/
 /* ----------------------------------------------------------------------------- */
 
-.timetable-wrapper{
+#timetable-wrapper{
     position: relative;
     flex: 1;
     min-width: 1024px;
@@ -239,19 +245,29 @@ body{
     height: 90%;*/
     border-radius: 10px;
 }
+.lecture{
+    border: solid 1px black;
+    /* box-shadow: inset 0 0 5px black; */
+}
 .subject-title-type-group{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .subject-title-type-group .subject-title{
     margin-right: 2px;
     font-weight: bold;
+    /* flex: 1; */
+    /* hyphens: auto;
+    word-break: break-word; */
+    min-width: 0;
 }
 .subject-type{
     margin-right: 2px;
+    min-width: 0;
 }
 .subject-group{
-
+    min-width: 0;
 }
 .subject-time{
     margin-bottom: -2px;
