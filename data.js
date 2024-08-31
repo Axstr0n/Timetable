@@ -2462,4 +2462,1404 @@ const DKSM = {
 
 //#endregion
 
+//#region SEMESTER 3
 
+// Energetsko strojništvo
+const EKGM = {
+    name: 'Energetika v krožnem gospodarstvu',
+    abbreviation: 'EKGM',
+    direction: 'Energetsko strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'III/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'II/3A'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SI-60A'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'thursday',
+            timeStart: '18:00',
+            timeEnd: '20:00',
+            classroom: 'SI-60A'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SI-60A'
+        },
+    },
+    bgColor: '#6aff00'
+};
+const TVEM = {
+    name: 'Trajnostni viri električne energije',
+    abbreviation: 'TVEM',
+    direction: 'Energetsko strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SI-67A'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SI-67A'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SI-67A'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'monday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SI-67A'
+        },
+    },
+    bgColor: '#6aff00'
+};
+const THAM = {
+    name: 'Tehniška akustika',
+    abbreviation: 'THAM',
+    direction: 'Energetsko strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'III/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'III/4'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SP-72'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'wednesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-72'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-72'
+        },
+    },
+    bgColor: '#6aff00'
+};
+const ELMM = {
+    name: 'Elektro mobilnost',
+    abbreviation: 'ELMM',
+    direction: 'Energetsko strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'IV/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'IV/3B'
+        },
+        VPS2: {
+            type: 'VP',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'IV/4'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SK-15'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SK-20'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SK-15'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'tuesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SK-15'
+        },
+    },
+    bgColor: '#6aff00'
+};
+// Procesno strojništvo
+const PMMM = {
+    name: 'Pametna mesta',
+    abbreviation: 'PMMM',
+    direction: 'Procesno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'K-1A-II'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'K-1A-I'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-1A-I'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'tuesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'K-1A-II'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-1A-I'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'DS-N3'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const PRTM = {
+    name: 'Prenosniki toplote',
+    abbreviation: 'PRTM',
+    direction: 'Procesno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'III/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'K-1A-I'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-1A-I'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'monday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'K-1A-I'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'monday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-1A-II'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'monday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'K-1A-I'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const PCTM = {
+    name: 'Procesna tehnika',
+    abbreviation: 'PCTM',
+    direction: 'Procesno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'IV/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-9A'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'tuesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'K-9A'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'tuesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'K-9A'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SK-18'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'K-9A'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-9A'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const VFSM = {
+    name: 'Večfazni sistemi',
+    abbreviation: 'VFSM',
+    direction: 'Procesno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'IV/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'K-1B'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'K-1B'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'K-1B'
+        },
+    },
+    bgColor: '#fe0'
+};
+// Konstruiranje
+const LKNM = {
+    name: 'Lahke konstrukcije',
+    abbreviation: 'LKNM',
+    direction: 'Konstruiranje',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'tuesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'III/1'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'III/1'
+        },
+    },
+    bgColor: '#fe0'
+};
+const HKSM = {
+    name: 'Hidravlične komponente in sistemi',
+    abbreviation: 'HKSM',
+    direction: 'Konstruiranje',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SK-9'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SK-9'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SK-9'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SK-9'
+        },
+    },
+    bgColor: '#fe0'
+};
+const VNZM = {
+    name: 'Vrednotenje na zanesljivost',
+    abbreviation: 'VNZM',
+    direction: 'Konstruiranje',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'tuesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'II/5'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'IV/6'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'monday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'IV/6'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'IV/6'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'IV/6'
+        },
+    },
+    bgColor: '#fe0'
+};
+const SGMM = {
+    name: 'Sestavljena gonila v mobilni tehniki',
+    abbreviation: 'SGMM',
+    direction: 'Konstruiranje',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'IV/6'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'wednesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'IV/6'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'IV/6'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'IV/6'
+        },
+    },
+    bgColor: '#fe0'
+};
+// Proizvodno strojništvo
+const PMTM = {
+    name: 'Pametne tovarne',
+    abbreviation: 'PMTM',
+    direction: 'Proizvodno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'DS-N1'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'wednesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'DS-N1'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'DS-N1'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'DS-N1'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SK-13'
+        },
+    },
+    bgColor: '#fe0'
+};
+const CAMM = {
+    name: 'CAM sistemi',
+    abbreviation: 'CAMM',
+    direction: 'Proizvodno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'II/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'tuesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SP-DL-1'
+        },
+    },
+    bgColor: '#fe0'
+};
+const ADTM = {
+    name: 'Aditivne tehnologije',
+    abbreviation: 'ADTM',
+    direction: 'Proizvodno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'IV/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'SP-43'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'monday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-43'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SP-43'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'tuesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SP-43'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SP-43'
+        },
+    },
+    bgColor: '#fe0'
+};
+const INKM = {
+    name: 'Inženirstvo kakovosti',
+    abbreviation: 'INKM',
+    direction: 'Proizvodno strojništvo',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'IV/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'II/5'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'monday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'monday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SP-DL-1'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'wednesday',
+            timeStart: '18:00',
+            timeEnd: '20:00',
+            classroom: 'SP-DL-1'
+        },
+    },
+    bgColor: '#fe0'
+};
+// Mehanika
+const MLSM = {
+    name: 'Mehanika lahkih konstrukcij',
+    abbreviation: 'MLSM',
+    direction: 'Mehanika',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'IV/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'III/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'I/7'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'I/7'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'I/7'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const EMAM = {
+    name: 'Eksperimentalna modalna analiza',
+    abbreviation: 'EMAM',
+    direction: 'Mehanika',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'monday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'P-17C'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'monday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'P-17C'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'P-17C'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'wednesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'P-17C'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'tuesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'P-17C'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const RLPM = {
+    name: 'Reologija polimerov',
+    abbreviation: 'RLPM',
+    direction: 'Mehanika',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'II/5'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'II/2'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'friday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'friday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'F13-3/K1.4.2'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const NMTM = {
+    name: 'Numerično modeliranje tehnoloških procesov',
+    abbreviation: 'NMTM',
+    direction: 'Mehanika',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'II/2'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'IV/3B'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/1'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'tuesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/1'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'tuesday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'II/1'
+        },
+    },
+    bgColor: '#fe0'
+};
+// Mehatronika in laserska tehnika
+const LMSM = {
+    name: 'Laserski merilni sistemi',
+    abbreviation: 'LMSM',
+    direction: 'Mehatronika in laserska tehnika',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '8:00',
+        timeEnd: '10:00',
+        classroom: 'IV/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'II/3B'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'I/6'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'monday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'I/6'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'monday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'I/6'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'I/6'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'monday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'I/6'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'friday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'I/6'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const LOTM = {
+    name: 'Laserska obdelovalna tehnologija',
+    abbreviation: 'LOTM',
+    direction: 'Mehatronika in laserska tehnika',
+    lecture: {
+        type: 'P',
+        day: 'wednesday',
+        timeStart: '12:00',
+        timeEnd: '14:00',
+        classroom: 'II/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'II/3A'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'I/6'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'wednesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'I/6'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'I/6'
+        },
+        VLS4: {
+            type: 'VL',
+            group: 'S4',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'I/6'
+        },
+        VLS5: {
+            type: 'VL',
+            group: 'S5',
+            day: 'tuesday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'I/6'
+        },
+        VLS6: {
+            type: 'VL',
+            group: 'S6',
+            day: 'tuesday',
+            timeStart: '12:00',
+            timeEnd: '14:00',
+            classroom: 'I/6'
+        },
+        
+    },
+    bgColor: '#fe0'
+};
+const NSSM = {
+    name: 'Napredni senzorski sistemi',
+    abbreviation: 'NSSM',
+    direction: 'Mehatronika in laserska tehnika',
+    lecture: {
+        type: 'P',
+        day: 'tuesday',
+        timeStart: '10:00',
+        timeEnd: '12:00',
+        classroom: 'IV/3B'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'IV/3B'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'thursday',
+            timeStart: '8:00',
+            timeEnd: '10:00',
+            classroom: 'SP-45B'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'thursday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'SP-45B'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'thursday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SP-45B'
+        },
+    },
+    bgColor: '#fe0'
+};
+const AMPM = {
+    name: 'Avtomatizacija proizvodnje',
+    abbreviation: 'AMPM',
+    direction: 'Mehatronika in laserska tehnika',
+    lecture: {
+        type: 'P',
+        day: 'monday',
+        timeStart: '14:00',
+        timeEnd: '16:00',
+        classroom: 'IV/3A'
+    },
+    exercises: {
+        VPS1: {
+            type: 'VP',
+            group: 'S1',
+            day: 'friday',
+            timeStart: '10:00',
+            timeEnd: '12:00',
+            classroom: 'IV/3B'
+        },
+        VLS1: {
+            type: 'VL',
+            group: 'S1',
+            day: 'tuesday',
+            timeStart: '14:00',
+            timeEnd: '16:00',
+            classroom: 'SP-45B'
+        },
+        VLS2: {
+            type: 'VL',
+            group: 'S2',
+            day: 'tuesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SP-45B'
+        },
+        VLS3: {
+            type: 'VL',
+            group: 'S3',
+            day: 'wednesday',
+            timeStart: '16:00',
+            timeEnd: '18:00',
+            classroom: 'SP-45B'
+        },
+    },
+    bgColor: '#fe0'
+};
+//#endregion
