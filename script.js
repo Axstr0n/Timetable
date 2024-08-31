@@ -1,7 +1,7 @@
 
 
 const subjects = {
-    "1g-1s": {
+    "mag-1s": {
         "EKMM": EKMM,
         "NPZM": NPZM,
         "ENSM": ENSM,
@@ -27,7 +27,7 @@ const subjects = {
         "PAPM": PAPM
 
     },
-    "1g-2s": {
+    "mag-2s": {
         "KNEM": KNEM,
         "PTMM": PTMM,
         "TRSM": TRSM,
@@ -51,10 +51,43 @@ const subjects = {
         "LSSM": LSSM,
         "FLIM": FLIM,
         "DKSM": DKSM
+    },
+    "mag-3s": {
+        "EKGM": EKGM,
+        "TVEM": TVEM,
+        "THAM": THAM,
+        "ELMM": ELMM,
 
+        "PMMM": PMMM,
+        "PRTM": PRTM,
+        "PCTM": PCTM,
+        "VFSM": VFSM,
+
+        "LKNM": LKNM,
+        "HKSM": HKSM,
+        "VNZM": VNZM,
+        "SGMM": SGMM,
+
+        "PMTM": PMTM,
+        "CAMM": CAMM,
+        "ADTM": ADTM,
+        "INKM": INKM,
+
+        "MLSM": MLSM,
+        "EMAM": EMAM,
+        "RLPM": RLPM,
+        "NMTM": NMTM,
+
+        "LMSM": LMSM,
+        "LOTM": LOTM,
+        "NSSM": NSSM,
+        "AMPM": AMPM,
     }
 }
 let subjectsStatus = {};
+if(localStorage.getItem("Axstr0n-Timetable_subjectsStatus")){
+    subjectsStatus = JSON.parse(localStorage.getItem("Axstr0n-Timetable_subjectsStatus"));
+}
 
 let currentSubjects = {};
 
@@ -74,7 +107,46 @@ gradeSemesterSelect.addEventListener('change', function(){
     DisplaySelectedSubjects();
 });
 
+// Download //
+document.getElementById('download-button').addEventListener('click', function() {
+    const content = document.getElementById('timetable-wrapper');
+    content.style.width = '1100px';
+    
+    html2canvas(content, { scale: 2 }).then(canvas => {
+        const dataUrl = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.href = dataUrl;
+        link.download = 'timetable.png';
+        link.click();
+        content.style.width = '100%'; // reset
+    });
+});
 
+// Save / Discard //
+// const saveButton = document.getElementById("save-button");
+// saveButton.addEventListener('click', function(){
+//     SaveToLocalStorage();
+// })
+const discardButton = document.getElementById("discard-button");
+discardButton.addEventListener('click', function(){
+    EraseFromLocalStorage();
+})
+
+function SaveToLocalStorage(){
+    localStorage.setItem("Axstr0n-Timetable_subjectsStatus", JSON.stringify(subjectsStatus));
+    //console.log("Saved to local storage");
+}
+function EraseFromLocalStorage(){
+    subjectsStatus = {};
+    InitializeCurrentSubjectsStatus();
+    localStorage.setItem("Axstr0n-Timetable_subjectsStatus", JSON.stringify(subjectsStatus));
+    // localStorage.removeItem("Axstr0n-Timetable_subjectsStatus");
+    //console.log("Erased from local storage");
+    console.log(subjectsStatus)
+    FillSubjectsAbbreviationContainer();
+    FillSubjectsContainer();
+    DisplaySelectedSubjects();
+}
 
 function FillSubjectsAbbreviationContainer(){
     document.getElementById('subjects-abbreviation-container').innerHTML = "";
@@ -84,19 +156,17 @@ function FillSubjectsAbbreviationContainer(){
         const color = subjectColors[index];
         subjectInfo.bgColor = `rgb(${color.r}, ${color.g}, ${color.b})`;
         index ++;
-        let subjectButtonHtml = "";
-        if(subjectsStatus[subjectInfo.abbreviation].canShow){
-            subjectButtonHtml += 
-            `
-            <button id="button-toggle-${subjectInfo.abbreviation}" class="abbreviation-button active-button" onclick='ToggleSubject("${subjectInfo.abbreviation}")' style="background-color: ${subjectInfo.bgColor}">${subjectInfo.abbreviation}</button>
-            `;
-        }
-        else{
-            subjectButtonHtml += 
-            `
-            <button id="button-toggle-${subjectInfo.abbreviation}" class="abbreviation-button" onclick='ToggleSubject("${subjectInfo.abbreviation}")' style="background-color: ${subjectInfo.bgColor}">${subjectInfo.abbreviation}</button>
-            `;
-        }
+        let subjectButtonHtml = 
+        `
+        <button id="button-toggle-${subjectInfo.abbreviation}" 
+                class="abbreviation-button ${subjectsStatus[subjectInfo.abbreviation].canShow?'active-button':''}"
+                onclick='ToggleSubject("${subjectInfo.abbreviation}")'
+                style="background-color: ${subjectInfo.bgColor}"
+        >
+            ${subjectInfo.abbreviation}
+        </button>
+        `;
+
         document.getElementById('subjects-abbreviation-container').innerHTML += subjectButtonHtml;
     }
     let buttons = document.querySelectorAll('button');
@@ -104,6 +174,7 @@ function FillSubjectsAbbreviationContainer(){
         button.addEventListener('click', function(){
             FillSubjectsContainer();
             DisplaySelectedSubjects();
+            SaveToLocalStorage();
         });
     }
 }
@@ -122,49 +193,24 @@ function FillSubjectsContainer(){
 }
 function CreateSubjectContainer(subject){
     if(!subjectsStatus[subject.abbreviation].canShow) return;
-    let subjectButtonHtml = "";
-    if(subjectsStatus[subject.abbreviation].canShow){
-        subjectButtonHtml += 
-        `
-        <button id="button-toggle-${subject.abbreviation}" class="active-button" onclick='ToggleSubject("${subject.abbreviation}")'>X</button>
-        `;
-    }
-    else{
-        subjectButtonHtml += 
-        `
-        <button id="button-toggle-${subject.abbreviation}" onclick='ToggleSubject("${subject.abbreviation}")'>X</button>
-        `;
-    }
+
     let lectureExerciseButtonsHtml = "";
     let labExerciseButtonsHtml = "";
     for (let [exerciseKey, exerciseInfo] of Object.entries(subject.exercises)) {
+        let exerciseButtonHtml =
+        `
+        <button id="button-toggle-${subject.abbreviation}-${exerciseKey}" 
+                class="${subjectsStatus[subject.abbreviation][exerciseKey]?'active-button':''}" 
+                onclick='ToggleSubjectExercise("${subject.abbreviation}", "${exerciseKey}")'
+        >
+            ${exerciseInfo.group}
+        </button>
+        `;
         if(exerciseInfo.type == 'VP'){
-            if(subjectsStatus[subject.abbreviation][exerciseKey]){
-                lectureExerciseButtonsHtml += 
-                `
-                <button id="button-toggle-${subject.abbreviation}-${exerciseKey}" class="active-button" onclick='ToggleSubjectExercise("${subject.abbreviation}", "${exerciseKey}")'>${exerciseInfo.group}</button>
-                `;
-            }
-            else{
-                lectureExerciseButtonsHtml += 
-                `
-                <button id="button-toggle-${subject.abbreviation}-${exerciseKey}" onclick='ToggleSubjectExercise("${subject.abbreviation}", "${exerciseKey}")'>${exerciseInfo.group}</button>
-                `;
-            }
+            lectureExerciseButtonsHtml += exerciseButtonHtml;
         }
         else if(exerciseInfo.type == 'VL'){
-            if(subjectsStatus[subject.abbreviation][exerciseKey]){
-                labExerciseButtonsHtml +=
-                `
-                <button id="button-toggle-${subject.abbreviation}-${exerciseKey}" class="active-button" onclick='ToggleSubjectExercise("${subject.abbreviation}", "${exerciseKey}")'>${exerciseInfo.group}</button>
-                `;
-            }
-            else{
-                labExerciseButtonsHtml +=
-                `
-                <button id="button-toggle-${subject.abbreviation}-${exerciseKey}" onclick='ToggleSubjectExercise("${subject.abbreviation}", "${exerciseKey}")'>${exerciseInfo.group}</button>
-                `;
-            }
+            labExerciseButtonsHtml += exerciseButtonHtml;
         }
     }
     let htmlCode =
@@ -190,8 +236,6 @@ function CreateSubjectContainer(subject){
 }
 
 function InitializeCurrentSubjectsStatus(){
-    // comment so that it remember when switching back to previous semester
-    //subjectsStatus = {}; ///
     for (let [subjectKey, subjectInfo] of Object.entries(currentSubjects)) {
         if (subjectInfo.abbreviation in subjectsStatus) {
             // console.log(`Subject ${subject.abbreviation} already created`);
@@ -213,6 +257,7 @@ function ToggleSubject(subjectAbbreviation){
 }
 function ToggleSubjectExercise(subjectAbbreviation, exerciseKey){
     subjectsStatus[subjectAbbreviation][exerciseKey] = !subjectsStatus[subjectAbbreviation][exerciseKey];
+    localStorage.setItem("Axstr0n-Timetable_subjectsStatus", JSON.stringify(subjectsStatus));
     ToggleClassActiveButton(subjectAbbreviation, exerciseKey);
 }
 // Toggles css class active-button
@@ -374,51 +419,6 @@ function AddLessonToTimetable(lesson, offsetXMultiplier, numberOfColumns){
         day = currentSubjects[abbreviation].exercises[lesson[1]].day;
     }
 
-    //#region CREATE DIVS
-    let entry_box = document.createElement('div');
-    entry_box.classList.add('entry-box');
-        
-    let entry = document.createElement('div');
-    entry.classList.add('entry');
-        
-    let subject_title_type_group = document.createElement('div');
-    subject_title_type_group.classList.add('subject-title-type-group');
-        
-    let subject_title = document.createElement('div');
-    subject_title.classList.add('subject-title');
-    subject_title.innerHTML = title;
-        
-    let subject_type = document.createElement('div');
-    subject_type.classList.add('subject-type');
-    subject_type.innerHTML = type;
-
-    let subject_group = document.createElement('div');
-    subject_group.classList.add('subject-group');
-    subject_group.innerHTML = group;
-        
-    let subject_time = document.createElement('div');
-    subject_time.classList.add('subject-time');
-    subject_time.innerHTML = `${timeStart}-${timeEnd}`;
-        
-    let subject_classroom = document.createElement('div');
-    subject_classroom.classList.add('subject-classroom');
-    subject_classroom.innerHTML = classroom;
-    //#endregion
-
-    //#region APPEND CHILDREN
-    subject_title_type_group.appendChild(subject_title);
-    subject_title_type_group.appendChild(subject_type);
-    subject_title_type_group.appendChild(subject_group);
-
-    entry.appendChild(subject_title_type_group);
-    entry.appendChild(subject_time);
-    entry.appendChild(subject_classroom);
-    entry_box.appendChild(entry);
-        
-    let entries = document.getElementById('entries');
-    entries.appendChild(entry_box);
-    //#endregion
-
     //#region CALCULATE POSITION
     let xGap = 0.2;
     let yGap = 0.3;
@@ -453,32 +453,31 @@ function AddLessonToTimetable(lesson, offsetXMultiplier, numberOfColumns){
     let height = ((ConvertTime(timeEnd)-7) - (ConvertTime(timeStart)-7)) * (100/13) - yGap * 2;
     //#endregion
     
-    //#region CHANGE STYLES
-    entry_box.style.top = `${top}%`;
-    entry_box.style.height = `${height}%`;
-    entry_box.style.left = `${left}%`;
-    entry_box.style.width = `${width}%`;
-    entry_box.style.borderWidth = '8px';
-    entry_box.style.backgroundColor = bgColor;
+    let fontSize = "12px";
+    if(width < 10){ fontSize = '10px'; }
+    if(width < 5){ fontSize = '9px'; }
+    if(width < 3){ fontSize = '8px'; }
+    if(width < 2){ fontSize = '7px'; }
 
-    if(width < 10){
-        entry.style.fontSize = '10px'
-    }
-    if(width < 9){
-        subject_title.innerHTML = abbreviation;
-    }
-    if(width < 5){
-        entry.style.fontSize = '9px'
-    }
-    if(type === 'P'){
-        entry_box.style.border = 'solid 1px black';
-        entry_box.style.boxShadow = 'inset 0 0 5px black';
-    }
-
-    //entry_box.style.opacity = 0.7;
-    //#endregion
-
-    //console.log('AddLessonToTimetable: done')
+    let html = 
+    `
+    <div class="entry-box ${type=='P'?'lecture':''}" 
+         style="top:${top}%; height:${height}%; left:${left}%; width:${width}%; background-color:${bgColor}">
+        <div class="entry" style="font-size:${fontSize}px">
+            <div class="subject-title-type-group">
+                <div class="subject-title">
+                    ${title.length < 25 && width > 9 ? title : abbreviation}
+                </div>
+                <div class="subject-type"> ${type} </div>
+                <div class="subject-group"> ${group} </div>
+                </div>
+            <div class="subject-time"> ${timeStart}-${timeEnd} </div>
+            <div class="subject-classroom"> ${classroom} </div>
+        </div>
+    </div>
+    `;
+    let entries = document.getElementById('entries');
+    entries.innerHTML += html;
 }
 
 
