@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -16,10 +17,16 @@
             <img src="logo.png" alt="logo" srcset="">
         </a>
         <div class="title">TIMETABLE</div>
-        <select name="" id="grade-semester-select">
-            <option value="1g-1s" >1. letnik - 1. semester</option>
-            <option value="1g-2s" selected>1. letnik - 2. semester</option>
-        </select>
+        <div class="download-save-discard-select">
+            <button id="download-button" title="Download timetable">📸</button>
+            <!-- <button id="save-button">💾</button> -->
+            <button id="discard-button" title="Reset">🗑️</button>
+            <select name="" id="grade-semester-select">
+                <!-- <option value="mag-1s" >MAG - 1. semester</option>
+                <option value="mag-2s">MAG - 2. semester</option> -->
+                <option value="mag-3s" selected>MAG - 3. semester</option>
+            </select>
+        </div>
     </div>
 
     <div id="subjects-abbreviation-container">
@@ -30,7 +37,7 @@
 
     </div>
     
-    <div class="timetable-wrapper">
+    <div id="timetable-wrapper">
         <div id="timetable">
             <div id="days">
                 <div class="day" style="left:0.00%">Ponedeljek</div>
