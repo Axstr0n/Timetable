@@ -2900,7 +2900,7 @@ const VFSM = {
     direction: 'Procesno strojništvo',
     lecture: {
         type: 'P',
-        day: 'monday',
+        day: 'thursday',
         timeStart: '12:00',
         timeEnd: '14:00',
         classroom: 'II/2'
@@ -2909,7 +2909,7 @@ const VFSM = {
         VPS1: {
             type: 'VP',
             group: 'S1',
-            day: 'thursday',
+            day: 'monday',
             timeStart: '12:00',
             timeEnd: '14:00',
             classroom: 'IV/3A'
@@ -2917,7 +2917,7 @@ const VFSM = {
         VLS1: {
             type: 'VL',
             group: 'S1',
-            day: 'thursday',
+            day: 'monday',
             timeStart: '12:00',
             timeEnd: '14:00',
             classroom: 'K-1B'
