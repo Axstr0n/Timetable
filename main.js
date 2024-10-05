@@ -46,11 +46,26 @@ function updateDate(){
     let week = getWeekRange(currentDate)
     document.getElementById("current-week").innerHTML = `${week.startOfWeek} - ${week.endOfWeek}`;
     weekDates = getDatesArray(week.startOfWeek, week.endOfWeek);
-    document.getElementById("day-monday").innerHTML = `Ponedeljek - ${weekDates[0]}`;
-    document.getElementById("day-tuesday").innerHTML = `Torek - ${weekDates[1]}`;
-    document.getElementById("day-wednesday").innerHTML = `Sreda - ${weekDates[2]}`;
-    document.getElementById("day-thursday").innerHTML = `Četrtek - ${weekDates[3]}`;
-    document.getElementById("day-friday").innerHTML = `Petek - ${weekDates[4]}`;
+    // document.getElementById("day-monday").innerHTML = `Ponedeljek - ${weekDates[0]}`;
+    // document.getElementById("day-tuesday").innerHTML = `Torek - ${weekDates[1]}`;
+    // document.getElementById("day-wednesday").innerHTML = `Sreda - ${weekDates[2]}`;
+    // document.getElementById("day-thursday").innerHTML = `Četrtek - ${weekDates[3]}`;
+    // document.getElementById("day-friday").innerHTML = `Petek - ${weekDates[4]}`;
+    UpdateDay("Ponedeljek", "monday", weekDates[0]);
+    UpdateDay("Torek", "tuesday", weekDates[1]);
+    UpdateDay("Sreda", "wednesday", weekDates[2]);
+    UpdateDay("Četrtek", "thursday", weekDates[3]);
+    UpdateDay("Petek", "friday", weekDates[4]);
+
+}
+function UpdateDay(daySlo, dayEng, date){
+    document.getElementById(`day-${dayEng}`).innerHTML = `${daySlo} - ${date}`;
+    if(workFreeDays.includes(date)){
+        document.getElementById(`day-${dayEng}`).classList.add("work-free")
+    }
+    else if(document.getElementById(`day-${dayEng}`).classList.contains("work-free")){
+        document.getElementById(`day-${dayEng}`).classList.remove("work-free")
+    }
 }
 
 function getDatesArray(start, end) {

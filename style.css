@@ -214,6 +214,9 @@ body{
     border-right: solid 1px #ddd;
     width: var(--day-width);
 }
+.work-free{
+    background-color: rgba(141, 141, 141, 0.3);
+}
 #hours{
     position: absolute;
     left: 0;
