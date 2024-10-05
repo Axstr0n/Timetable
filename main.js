@@ -23,9 +23,17 @@ function getWeekRange(baseDate) {
     };
 }
 function formatDate(date){
-    let formated = date.split('.').map(function(string) {
-        return string.replace(' ','');
-    });
+    let formated;
+    if(date.includes('.')){
+        formated = date.split('.').map(function(string) {
+            return string.replace(' ','');
+        });
+    }
+    if(date.includes('/')){
+        formated = date.split('/').map(function(string) {
+            return string.replace(' ','');
+        });
+    }
     if(formated[0].length===1) formated[0] = `0${formated[0]}`;
     if(formated[1].length===1) formated[1] = `0${formated[1]}`;
     formated = formated.join('.')
