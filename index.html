@@ -37,15 +37,20 @@
     <div id="subjects-container">
 
     </div>
-    
+    <div id="calendar-container">
+        <button id="calendar-previous-button" onclick="previousDate()"><</button>
+        <div id="current-week">  </div>
+        <button id="calendar-next-button" onclick="nextDate()">></button>
+        
+    </div>
     <div id="timetable-wrapper">
         <div id="timetable">
             <div id="days">
-                <div class="day" style="left:0.00%">Ponedeljek</div>
-                <div class="day" style="left:20.00%">Torek</div>
-                <div class="day" style="left:40.00%">Sreda</div>
-                <div class="day" style="left:60.00%">Četrtek</div>
-                <div class="day" style="left:80.00%">Petek</div>
+                <div class="day" id="day-monday" style="left:0.00%">Ponedeljek</div>
+                <div class="day" id="day-tuesday" style="left:20.00%">Torek</div>
+                <div class="day" id="day-wednesday" style="left:40.00%">Sreda</div>
+                <div class="day" id="day-thursday" style="left:60.00%">Četrtek</div>
+                <div class="day" id="day-friday" style="left:80.00%">Petek</div>
             </div>
             <div id="hours">
                 <div class="hour" style="bottom: 100.00%">
@@ -110,6 +115,7 @@
             <div class="author"> Axstr0n</div>
         </div>
     </div>
-    <script src="script.js"></script>
+    
+    <script src="main.js"></script>
 </body>
 </html>
