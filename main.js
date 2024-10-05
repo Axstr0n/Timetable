@@ -18,22 +18,15 @@ function getWeekRange(baseDate) {
     endOfWeek.setDate(startOfWeek.getDate() + 6);
 
     return {
-        startOfWeek: formatDate(startOfWeek.toLocaleDateString()),
-        endOfWeek: formatDate(endOfWeek.toLocaleDateString())
+        startOfWeek: formatDate(startOfWeek.toLocaleDateString('de-DE')),
+        endOfWeek: formatDate(endOfWeek.toLocaleDateString('de-DE'))
     };
 }
 function formatDate(date){
-    let formated;
-    if(date.includes('.')){
-        formated = date.split('.').map(function(string) {
-            return string.replace(' ','');
-        });
-    }
-    if(date.includes('/')){
-        formated = date.split('/').map(function(string) {
-            return string.replace(' ','');
-        });
-    }
+    let formated = date.split('.').map(function(string) {
+        return string.replace(' ','');
+    });
+    
     if(formated[0].length===1) formated[0] = `0${formated[0]}`;
     if(formated[1].length===1) formated[1] = `0${formated[1]}`;
     formated = formated.join('.')
@@ -70,7 +63,7 @@ function getDatesArray(start, end) {
     let currentDate = new Date(startDate);
     
     while (currentDate <= endDate) {
-        datesArray.push(formatDate(currentDate.toLocaleDateString())); // Add formatted date to array
+        datesArray.push(formatDate(currentDate.toLocaleDateString('de-DE'))); // Add formatted date to array
         currentDate.setDate(currentDate.getDate() + 1);    // Move to next day
     }
 
